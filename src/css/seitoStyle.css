@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+
+:root {
+  --main-bg-color: #ffaaa3;
+  --bg-color-gradient: #ffc5be;
+  --border-text-color: #ff958c;
+  --type-letter: 'Itim', cursive;;
+}
+a{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+}
+body{
+	padding: 0;
+	margin: 0;
+	min-height: 100vh;
+	background: linear-gradient(var(--main-bg-color),var(--bg-color-gradient));
+	font-family: var(--type-letter); 
+	overflow-x: hidden;
+}
+header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 10000;
+}
+header .logo{
+	color: #fff;
+	font-weight: 700;
+	text-decoration: none;
+	font-size: 2em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+header a{
+	padding-left: 100px;
+}
+header ul{
+	padding-top: 30px;
+	padding-right: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+header ul li{
+	list-style: none;
+	margin-left: 20px;
+}
+header ul li a{
+	text-decoration: none;
+	padding: 6px 15px;
+	color: #fff;
+	border-radius: 20px;
+}
+
+header ul li a:hover ,
+header ul li a.active{
+	background: #fff;
+	color: var(--main-bg-color);
+
+}
+
+section{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+section::before{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height:100px;
+	background: linear-gradient(to top, var(--main-bg-color),transparent);
+	z-index: 10000;
+	overflow: hidden;
+}
+
+section img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	pointer-events: none;
+}
+section img.fix-color{
+	mix-blend-mode: screen;
+}
+.layer-0{
+	z-index: -1;
+}
+.layer-1{
+	z-index: 0;
+}
+#text{
+	position: absolute;
+	
+	color: #fff;
+	white-space: nowrap;
+	font-size: 7.5vw;
+	z-index: 9;
+}
+#btn{
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	padding: 8px 30px;
+	border-radius: 40px;
+	background: #fff;
+	color: var(--main-bg-color);
+	font-size: 1.5em;
+	
+	transform: translateY(100px);
+}
+.sec{
+	position: relative;
+	padding: 100px;
+	background-color: var(--main-bg-color);
+}
+.sec h2{
+	font-size: 3.5em;
+	margin-bottom: 10px;
+	color: #fff;
+}
+.sec p{
+	font-size: 1em;
+	color: #fff;
+}
+.stroke {
+-webkit-text-stroke: 0.1px var( --border-text-color);
+}
