@@ -15,7 +15,7 @@ window.addEventListener('scroll',function(){
 	let value = window.scrollY;
 	if(value<maxSize){
 		img1.style.top = value * 1 + 'px';
-		img2.style.left = value * 0.5 + 'px';
+		img2.style.left = -value * 0.5 + 'px';
 		img3.style.top = value * 0.5 + 'px';
 		img4.style.top = value * 0.2 + 'px';
 		img5.style.top = value * 0.1 + 'px';
